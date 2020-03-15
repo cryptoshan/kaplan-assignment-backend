@@ -8,8 +8,8 @@ const getUpcomingCourses = (_req, res, _next) => {
         if (err) {
             throw err;
         }
-
-        res.send(JSON.parse(data));
+        const result = JSON.parse(data);
+        res.send({ message: 'Success', data: result });
     });
 };
 
